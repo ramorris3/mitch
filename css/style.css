@@ -1,0 +1,13 @@
+body {
+    padding-top: 70px;
+}
+
+.game-thumb {
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.game-thumb:hover {
+    background-color: #bce8f1;
+}
