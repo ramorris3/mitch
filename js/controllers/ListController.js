@@ -5,17 +5,20 @@ app.controller('ListController', ['GameService',
 
         self.games = GameService.games;
 
-        // adds a game to the list
-        self.addGame = function(title, developer, genre) {
-            // Here you would probably call a GameService.add function
-            // that would make an http request to the backend.  Since
-            // our data is hardcoded, we'll just add a game object
-            // to the games list instead of posting to the server.
-            self.games.push({
-                title: title,
-                developer: developer,
-                genre:genre
-            });
+        // used to add new games
+        self.newGame = {
+            title: '',
+            developer: '',
+            genre: ''
+        };
+
+        // adds a game to the list of games
+        self.addGame = function() {
+            // The GameService has an interface for adding games
+            // to our data model's games list, so we're going to
+            // call that function here.  See GameService.js to see
+            // the implementation of that function
+            GameService.addGame(self.newGame);
         };
     }
 ]);

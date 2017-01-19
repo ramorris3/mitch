@@ -1,0 +1,18 @@
+<div class="content cold-md-6 col-md-offset-3">
+
+    <img class="box-img" ng-src="{{DetailCtrl.game.img}}" />
+
+    <h1>{{DetailCtrl.game.title}}</h1>
+    <h4>by {{DetailCtrl.game.developer}}</h4>
+    <h4>{{DetailCtrl.game.genre}}</h4>
+    <h4 ng-if="DetailCtrl.game.comment">Comments: {{DetailCtrl.game.comment}}</h4>
+
+    <br /><br />
+
+    <div class="input-group col-md-6">
+        <span class="input-group-btn">
+            <button class="btn btn-default" ng-click="DetailCtrl.addComment()">Submit</button>
+        </span>
+        <input type="text" class="form-control" placeholder="Add a comment here..." ng-model="DetailCtrl.comment">
+    </div>
+</div>

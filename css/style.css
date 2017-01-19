@@ -2,12 +2,48 @@ body {
     padding-top: 70px;
 }
 
+.content {
+    padding-bottom: 200px;
+}
+
 .game-thumb {
-    cursor: pointer;
     padding: 20px;
     border-radius: 5px;
 }
 
+.game-thumb h2 {
+    cursor: pointer;
+}
+
+.game-thumb-img {
+    cursor: pointer;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    height: 150px;
+    width: 150px;
+    border-radius: 5px;
+    float:left;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.game-thumb-img img {
+    vertical-align: middle;
+    min-height: 150px;
+    max-height: 200px;
+    max-width: 250px;
+}
+
+.new-game {
+    padding: 20px;
+}
+
 .game-thumb:hover {
     background-color: #bce8f1;
+}
+
+.box-img {
+    margin: 0 auto;
+    max-height: 500px;
 }

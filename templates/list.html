@@ -1,8 +1,33 @@
-<div class="col-md-8 col-md-offset-2">
+<div class="content col-md-8 col-md-offset-2">
     <div class="game-thumb" ng-repeat="game in ListCtrl.games">
-        <h2>{{game.title}}</h2>
+        <div class="game-thumb-img" ui-sref="detail({id: game.id})">
+            <img ng-src="{{game.img}}" />
+        </div>
+        <h2 ui-sref="detail({id: game.id})">{{game.title}}</h2>
         <h5>by {{game.developer}}</h5>
         <h5>{{game.genre}}</h5>
         <br/><br/>
     </div>
+
+    <br/>
+
+    <div class="new-game">
+        <h2>Add a game:</h2>
+
+        <label>Title&nbsp;
+            <input type="text" class="form-control" ng-model="ListCtrl.newGame.title">
+        </label>
+        <label>Developer&nbsp;
+            <input type="text" class="form-control" ng-model="ListCtrl.newGame.developer">
+        </label>
+        <label>Genre&nbsp;
+            <input type="text" class="form-control" ng-model="ListCtrl.newGame.genre">
+        </label>
+        <label>Image URL&nbsp;
+            <input type="text" class="form-control" ng-model="ListCtrl.newGame.img">
+        </label>
+        <br/>
+        <button class="btn btn-default" ng-click="ListCtrl.addGame()">Add game</button>
+    </div>
+
 </div>
